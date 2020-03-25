@@ -1,13 +1,14 @@
 #include <stdio.H>
 #include <stdlib.h>
-#define TAM 50
+
+#define TAM 50
 
 // Prototipos
 int menu();
 void InserirInicio();
 void Listar();
 
-// Estrutur` de dados da nova musica que sera inóerida
+// Estrutura de dados da nova musicaÂ que sera inÃ³erida
 struct NovaMusica{
 	char nome_da_musica[TAM];
 	char nome_da_banda[TAM];
@@ -15,16 +16,15 @@ struct NovaMusica{
 	NovaMusica* prox;
 } *Head;
 
-// Inycio da execuçãoM
-// Inicio da execução
+// Inicio da execuÃ§Ã£o
 int main() {
 	int op, c;
 	float tempo; // armazena o tempo da musica
 	char nome_musica[TAM]; // armazena o nome da musica
 	char nome_banda[TAM]; // armazena o nome do cantor
 
-	// laço infinito que retorna o menu ao final
-	// de cada função
+	// laÃ§o infinito que retorna o menu ao final
+	// de cada funÃ§Ã£o
 	while (1) {
 		op = menu();
 		switch (op) {
@@ -42,7 +42,7 @@ int main() {
 	}
 	return 0;
 }
-// Função que exibe o menu
+// FunÃ§Ã£o que exibe o menu
 int menu() {
 	int op, c;
 
@@ -63,7 +63,7 @@ int menu() {
 	return op;
 }
 
-// Função para inserir a nova musica no inicio da lista
+// FunÃ§Ã£o para inserir a nova musica no inicio da lista
 void InserirInicio() {
 	NovaMusica* NovoElemento;
 
@@ -77,7 +77,7 @@ void InserirInicio() {
 	printf("Digite o tempo de duracao[ex: 1.30]: ");
 	scanf_s("%f", &NovoElemento->tempo_musica);
 
-	// condição que verifica se a lista esta vazia
+	// condiÃ§Ã£o que verifica se a lista esta vazia
 	if (Head == NULL) {
 		Head = NovoElemento;
 		Head->prox = NULL;
@@ -88,19 +88,19 @@ void InserirInicio() {
 	}
 }
 
-// Função para listar todas as faixas
+// FunÃ§Ã£o para listar todas as faixas
 void Listar() {
 	NovaMusica* ElementoVarredura;
 	ElementoVarredura = (struct NovaMusica*)malloc(sizeof(struct NovaMusica));
 
 	ElementoVarredura = Head;
 
-	// condição que verifica se a lista esta vazia
+	// condiÃ§Ã£o que verifica se a lista esta vazia
 	if (ElementoVarredura == NULL) {
 		return;
 	}
 
-	// Laço que imprime a lista encadeada
+	// LaÃ§o que imprime a lista encadeada
 	while (ElementoVarredura != NULL) {
 		printf("\n- Musica: %s", ElementoVarredura->nome_da_musica);
 		printf("- Artista: %s", ElementoVarredura->nome_da_banda);
