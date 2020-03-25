@@ -1,0 +1,6 @@
+﻿  Origem.cpp
+C:\Users\Layla\Desktop\Project1\Project1\Origem.cpp(23,7): warning C4101: 'nome_musica': variável local não referenciada
+C:\Users\Layla\Desktop\Project1\Project1\Origem.cpp(22,8): warning C4101: 'tempo': variável local não referenciada
+C:\Users\Layla\Desktop\Project1\Project1\Origem.cpp(24,7): warning C4101: 'nome_banda': variável local não referenciada
+C:\Users\Layla\Desktop\Project1\Project1\Origem.cpp(21,10): warning C4101: 'c': variável local não referenciada
+  Project1.vcxproj -> C:\Users\Layla\Desktop\Project1\Debug\Project1.exe
