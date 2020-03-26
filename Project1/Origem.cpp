@@ -1,6 +1,7 @@
 #include <stdio.H>
 #include <stdlib.h>
 
+// Macro
 #define TAM 50
 
 // Prototipos
@@ -18,10 +19,7 @@ struct NovaMusica{
 
 // Inicio da execução
 int main() {
-	int op, c;
-	float tempo; // armazena o tempo da musica
-	char nome_musica[TAM]; // armazena o nome da musica
-	char nome_banda[TAM]; // armazena o nome do cantor
+	int op;
 
 	// laço infinito que retorna o menu ao final
 	// de cada função
@@ -70,6 +68,7 @@ void InserirInicio() {
 	// alocar o elemento na memoria
 	NovoElemento = (struct NovaMusica*)malloc(sizeof(struct NovaMusica));
 
+	// Recebe os dados da musica
 	printf("Digite o nome da musica: ");
 	fgets(NovoElemento->nome_da_musica, TAM, stdin);
 	printf("Nome do Artista/Banda: ");
@@ -100,7 +99,7 @@ void Listar() {
 		return;
 	}
 
-	// Laço que imprime a lista encadeada
+	// Imprime a lista encadeada
 	while (ElementoVarredura != NULL) {
 		printf("\n- Musica: %s", ElementoVarredura->nome_da_musica);
 		printf("- Artista: %s", ElementoVarredura->nome_da_banda);
